@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "express": "^4.21.1"
+  },
+  "name": "js_module_1_2",
+  "description": "",
+  "version": "1.0.0",
+  "main": "task_1.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Anastasia Vereshchaka <doitinyourownway.f@gmail.com>",
+  "license": "ISC"
+}
