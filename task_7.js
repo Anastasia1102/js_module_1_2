@@ -60,41 +60,62 @@ console.log("\n");
 
 // Створіть функцію generateRandomNumber, яка продовжує генерувати випадкові числа від 1 до 10 до тих пір, поки не згенерує число 7. Виведіть усі згенеровані числа в консоль. Використайте цикл do...while.
 
-// function generateRandomNumber() {
-//   // ваш код тут
-// }
+function generateRandomNumber() {
+  let randomNumber;
+  do {
+    randomNumber = Math.round(Math.random() * 10);
+    console.log(randomNumber);
+  } while (randomNumber !== 7);
+}
 
-// generateRandomNumber();
-// // Вивід (наприклад):
-// // 3
-// // 9
-// // 4
-// // 7
+generateRandomNumber();
+// Вивід (наприклад):
+// 3
+// 9
+// 4
+// 7
+console.log("\n");
 
 // Задача 5 (складна, while)
 
 // Напишіть функцію findFactorial, яка приймає число n і повертає його факторіал (n!). Факторіал числа n визначається як добуток усіх чисел від 1 до n. Використайте цикл while.
 
-// function findFactorial(n) {
-//   // ваш код тут
-// }
+function findFactorial(n) {
+  let factorial = 1;
+  let i = 1;
+  while (i <= n) {
+    factorial *= i;
+    i++;
+  }
+  return factorial;
+}
 
-// console.log(findFactorial(5)); // 120 (5 * 4 * 3 * 2 * 1)
-// console.log(findFactorial(7)); // 5040
+console.log(findFactorial(5)); // 120 (5 * 4 * 3 * 2 * 1)
+console.log(findFactorial(7)); // 5040
+
+console.log("\n");
 
 // Задача 6 (складна, do...while)
 
 // Створіть функцію collectUserInput, яка зберігає в масив усі введені користувачем числа. Використовуйте цикл do...while для зчитування чисел (через prompt або у вигляді змінної для тренування). Коли користувач вводить порожній рядок або “stop”, цикл повинен завершитися і функція повертає масив чисел.
 
-// function collectUserInput() {
-//   let inputs = [];
-//   let userInput;
-//   // ваш код тут
-//   return inputs;
-// }
+function collectUserInput() {
+  let inputs = [];
+  let userInput;
+  do {
+    userInput = prompt("Enter your number:");
+    inputs.push(userInput);
+    console.log(inputs);
+  } while (!userInput.includes("") || !userInput.includes("stop"));
+  return inputs;
+}
 
 // console.log(collectUserInput());
-// // Вивід:
-// // [12, 5, 8, ...] (масив чисел, введених користувачем)
+
+console.log("\n");
+console.log("\n");
+console.log("\n");
+// Вивід:
+// [12, 5, 8, ...] (масив чисел, введених користувачем)
 
 // Ці задачі допоможуть вам освоїти основи роботи з циклами while та do...while, і як використовувати їх для різних типів завдань у JavaScript.
