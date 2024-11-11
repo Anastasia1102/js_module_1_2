@@ -30,22 +30,17 @@ console.log("\n");
 
 // Задача 3 (середня)
 
-// Створіть функцію isValidUsername, яка приймає рядок username і повертає true, якщо ім’я користувача має більше 5 символів або менше 15 символів (включно) і не містить пробілів. Використайте оператори && та ||.
+// Створіть функцію isValidUsername, яка приймає рядок username і повертає true, якщо ім’я користувача має більше 5 символів, менше 15 символів (включно) і не містить пробілів. Використайте оператори && та ||.
 
 function isValidUsername(username) {
-  if (
-    (username >= 5 || username.length <= 15) &&
-    username.includes(" ") !== true
-  ) {
-    return true;
-  } else {
-    return false;
-  }
+  return (
+    username.length >= 5 && username.length <= 15 && !username.includes(" ")
+  );
 }
 
 console.log(isValidUsername("john_doe")); // true
 console.log(isValidUsername("john doe")); // false
-console.log(isValidUsername("a")); // true
+console.log(isValidUsername("a")); // false
 console.log(isValidUsername("thisisaverylongusername")); // false
 
 console.log("\n");
